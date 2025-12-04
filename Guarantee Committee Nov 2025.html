@@ -120,7 +120,7 @@
     }
 
     .page-title {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       color: var(--ncgcl-blue);
     }
@@ -232,21 +232,21 @@
     }
 
     .card-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       color: var(--text-main);
       margin-top: 3px;
     }
 
     .card-value-xl {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       color: var(--text-main);
       margin-top: 3px;
     }
 
     .card-body {
-      font-size: 12px;
+      font-size: 13px;
       color: #4b5563;
       margin-top: 4px;
       line-height: 1.55;
@@ -266,7 +266,7 @@
       align-items: center;
     }
     .section-title {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--ncgcl-blue);
     }
@@ -285,7 +285,7 @@
     .list {
       margin: 0;
       padding-left: 18px;
-      font-size: 12px;
+      font-size: 13px;
       color: #4b5563;
       line-height: 1.6;
     }
@@ -295,7 +295,7 @@
       background-color: rgba(3,80,118,0.03);
       padding: 8px 10px;
       border-radius: 8px;
-      font-size: 12px;
+      font-size: 13px;
       color: #374151;
       margin-top: 8px;
     }
@@ -303,7 +303,7 @@
     ol.resolutions {
       margin: 0;
       padding-left: 18px;
-      font-size: 12px;
+      font-size: 13px;
       color: #374151;
       line-height: 1.6;
     }
@@ -333,6 +333,113 @@
       color: var(--text-main);
       margin-top: 2px;
     }
+
+    /* Deal pipeline table */
+    .deal-table-wrapper {
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    .deal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 720px;
+    }
+
+    .deal-table th,
+    .deal-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--ncgcl-border);
+    }
+
+    .deal-table th {
+      background-color: rgba(3,80,118,0.06);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 11px;
+      color: #4b5563;
+      text-align: left;
+    }
+
+    .deal-table td.amount {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .deal-table tfoot td {
+      border-top: 2px solid var(--ncgcl-blue);
+      font-weight: 700;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 500;
+      background-color: rgba(3,80,118,0.06);
+      color: var(--ncgcl-blue);
+    }
+
+    /* Process flow styling */
+    .flow-head {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ncgcl-blue);
+      margin-bottom: 6px;
+    }
+
+    .flow-subtitle {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .flow-step {
+      flex: 1 1 150px;
+      min-width: 150px;
+      background-color: rgba(3,80,118,0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(3,80,118,0.15);
+      padding: 10px 8px;
+      text-align: center;
+      position: relative;
+    }
+
+    .flow-step-number {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background-color: var(--ncgcl-blue);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+
+    .flow-step-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .flow-step-caption {
+      font-size: 12px;
+      color: #4b5563;
+      margin-top: 2px;
+    }
   </style>
 </head>
 <body>
@@ -352,8 +459,11 @@
       <button class="nav-btn" data-target="bipl-lt"><span class="icon">🏭</span><span>3. BIPL – LT Agri &amp; Assets</span></button>
       <button class="nav-btn" data-target="pmic"><span class="icon">🤝</span><span>4. PMIC – Microfinance PCG</span></button>
       <button class="nav-btn" data-target="unido"><span class="icon">🌍</span><span>5. UNIDO – Sindh Consortium</span></button>
-      <button class="nav-btn" data-target="risk"><span class="icon">🛡️</span><span>6. Risk &amp; Capital View</span></button>
-      <button class="nav-btn" data-target="resolutions"><span class="icon">✅</span><span>7. Resolutions Summary</span></button>
+      <button class="nav-btn" data-target="process"><span class="icon">🔄</span><span>6. Guarantee Origination – Process Flow</span></button>
+      <button class="nav-btn" data-target="pipeline"><span class="icon">📈</span><span>7. Deal Pipeline – Upcoming Year</span></button>
+      <button class="nav-btn" data-target="shariah"><span class="icon">🕌</span><span>8. Shariah Advisory – Al Hilal</span></button>
+      <button class="nav-btn" data-target="risk"><span class="icon">🛡️</span><span>9. Risk &amp; Capital View</span></button>
+      <button class="nav-btn" data-target="resolutions"><span class="icon">✅</span><span>10. Resolutions Summary</span></button>
     </div>
   </aside>
 
@@ -760,7 +870,316 @@
       </div>
     </section>
 
-    <!-- 6. RISK & CAPITAL VIEW -->
+    <!-- 6. GUARANTEE ORIGINATION – PROCESS FLOW -->
+    <section id="process" class="section">
+      <div class="section-header">
+        <div class="section-title">Guarantee Origination – Process Flow</div>
+        <div class="badge">For Internal Alignment</div>
+      </div>
+
+      <div class="card">
+        <div class="flow-head">Sponsoring Stakeholders</div>
+        <div class="flow-subtitle">
+          Process jointly anchored by the relevant department of the partner bank and the CEO of NCGCL, with
+          legal and Shariah teams engaged at appropriate stages.
+        </div>
+
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-number">1</div>
+            <div class="flow-step-label">Working Paper</div>
+            <div class="flow-step-caption">
+              Concept note prepared by the bank’s business team in consultation with NCGCL, defining target segment,
+              structure and expected impact.
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-number">2</div>
+            <div class="flow-step-label">NDA / MoU</div>
+            <div class="flow-step-caption">
+              Non-disclosure agreement and/or MoU executed to enable detailed data sharing and joint product development.
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-number">3</div>
+            <div class="flow-step-label">Shariah &amp; Legal Review</div>
+            <div class="flow-step-caption">
+              Internal Shariah and legal departments of the bank, and NCGCL’s legal/Shariah advisors,
+              review and clear the proposed structure and documentation.
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-number">4</div>
+            <div class="flow-step-label">Approval by NCGCL</div>
+            <div class="flow-step-caption">
+              Proposal presented to NCGCL’s internal committees and Board, with approvals obtained within
+              approved guarantee policy and RAC framework.
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-number">5</div>
+            <div class="flow-step-label">Term Sheet</div>
+            <div class="flow-step-caption">
+              Commercial and risk terms, covenants and reporting requirements documented and agreed
+              between NCGCL and the partner bank.
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-number">6</div>
+            <div class="flow-step-label">MAGFA</div>
+            <div class="flow-step-caption">
+              MAGFA executed and effective, operationalizing the facility and enabling disbursements under
+              the approved guarantee structure.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          Note: The department head at the bank and the CEO of NCGCL provide oversight across the process,
+          with key decision points at Working Paper sign-off, Shariah/legal clearance, NCGCL approval and MAGFA execution.
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DEAL PIPELINE – UPCOMING YEAR -->
+    <section id="pipeline" class="section">
+      <div class="section-header">
+        <div class="section-title">NCGCL Deal Pipeline – Upcoming Year</div>
+        <div class="badge">For Information / Pipeline Tracking</div>
+      </div>
+
+      <div class="card highlight-row" style="margin-bottom:12px;">
+        <div class="grid grid-3">
+          <div>
+            <div class="highlight-label">Total Indicative Pipeline</div>
+            <div class="highlight-value">PKR 8,400m</div>
+          </div>
+          <div>
+            <div class="highlight-label">Institutions Engaged</div>
+            <div class="highlight-value">15+ banks, DFIs &amp; platforms</div>
+          </div>
+          <div>
+            <div class="highlight-label">Status</div>
+            <div class="highlight-value">From MoU / NDA stage to near Board / MAGFA approvals</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Pipeline by Counterparty (Indicative)</div>
+        <div class="deal-table-wrapper">
+          <table class="deal-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">S.No</th>
+                <th style="width: 220px;">Institution</th>
+                <th style="width: 140px; text-align:right;">Amount (PKR Mn)</th>
+                <th>Pipeline Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>BIPL</td>
+                <td class="amount">200</td>
+                <td>Meeting being arranged between NCGCL's legal counsel and BIPL's Shariah and Legal Departments.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>UNIDO / Pak Brunei</td>
+                <td class="amount">200</td>
+                <td>Pak Brunei's final board approval is in process for credit lines to SAFCO and Thardeep.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>PMIC</td>
+                <td class="amount">1,000</td>
+                <td>MAGFA has been approved by PMIC's legal team.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>KCBL</td>
+                <td class="amount">100</td>
+                <td>NCGCL Board approval is in place.</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Bank Alfalah</td>
+                <td class="amount">1,000</td>
+                <td>The Risk and Business teams are aligned with the concept paper and computation. BAFL to revert with final feedback for incorporation in the Term Sheet; follow-up underway, response expected by 03 Dec 2025.</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Meezan Bank</td>
+                <td class="amount">1,500</td>
+                <td>Business team aligned with concept paper. Session to be arranged with Finance team to walk through NCGCL guarantee advantages; final feedback to be incorporated in term sheet.</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>JS Bank</td>
+                <td class="amount">500</td>
+                <td>Concept paper under internal review.</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>HBL</td>
+                <td class="amount">1,500</td>
+                <td>MoU signed on 02 Dec 2025.</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>HBL MFB</td>
+                <td class="amount">1,000</td>
+                <td>Template shared for data solicitation; based on responses, guarantee offering to be proposed (first-loss for new product and additional risk coverage under IFC pari passu).</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>JS Bank (2nd line)</td>
+                <td class="amount">500</td>
+                <td>Additional concept paper under review internally.</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Mashreq Bank</td>
+                <td class="amount">500</td>
+                <td>NDA signed with Mashreq Digital team; they will revert with possible credit line request to be guaranteed by NCGCL.</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>HBL Zarai</td>
+                <td class="amount">300</td>
+                <td>Pilot under discussion whereby supplier credit will be awarded to HBL Zarai from manufacturers of agri inputs (fertilizers, seeds, pesticides etc.); modalities being finalised.</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>BusCaro</td>
+                <td class="amount">100</td>
+                <td>Initial discussions underway to arrange working capital lines partially supported by a credit guarantee.</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>PMN</td>
+                <td class="amount">–</td>
+                <td>MoU content has been agreed; signature pending. Once signed, PMN to provide a platform to introduce NCGCL to MFIs, MFBs and NBFIs. CEO’s availability to be communicated.</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>SEDF</td>
+                <td class="amount">–</td>
+                <td>MoU to be signed; expected in week of 09 Dec 2025 to enable information sharing on prospective deals between the two entities.</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td><strong>Total</strong></td>
+                <td class="amount">8,400</td>
+                <td>Aggregate indicative pipeline across engaged counterparties.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="footer-note">
+          Note: Amounts are indicative and subject to due diligence, approvals and term sheet finalisation.
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SHARIAH ADVISORY – AL HILAL -->
+    <section id="shariah" class="section">
+      <div class="section-header">
+        <div class="section-title">Shariah Advisory Proposal – Al Hilal Shariah Advisors</div>
+        <div class="badge">Progress Update for Board / Committee</div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-label">Shariah Advisor</div>
+          <div class="card-value-xl">Al Hilal</div>
+          <div class="card-body">
+            Pakistan’s first licensed standalone Shariah advisory firm with extensive experience in capital markets,
+            sukuk structuring and outsourced Shariah advisory relationships across banks, AMCs and corporates.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Mandate Objective</div>
+          <div class="card-body">
+            Establish a robust Takaful-based guarantee framework for NCGCL with ongoing Shariah oversight covering
+            product design, operations, claims, and segregation between Islamic and conventional activities.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Progress &amp; Status</div>
+          <div class="card-body">
+            Proposal received and reviewed by management; scope aligns with NCGCL’s Islamic window roadmap.
+            Key workstreams and fee structure agreed in principle, subject to final approval and appointment.
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:12px;">
+        <div class="card">
+          <div class="card-title">1. Structure Development</div>
+          <ul class="list">
+            <li>Design and development of a Takaful-based guarantee structure tailored to NCGCL’s objectives and RAC.</li>
+            <li>Review of all agreements, documentation and operational procedures to ensure end-to-end Shariah alignment.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">2. Regular Shariah Review</div>
+          <ul class="list">
+            <li>Ongoing review of guarantee operations, risk assessment and claims settlement, including marketing practices.</li>
+            <li>Identification and disposal of any non-compliant income in line with Shariah guidelines.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">3. Shariah Certification</div>
+          <ul class="list">
+            <li>Issuance of formal Shariah certification (fatwa) for the approved guarantee structures and documentation.</li>
+            <li>Periodic renewal based on review outcomes and compliance reports.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:12px;">
+        <div class="card">
+          <div class="card-title">4. Operational Segregation</div>
+          <ul class="list">
+            <li>Guidance on full segregation between Shariah-compliant guarantee activities and any conventional operations.</li>
+            <li>Monitoring of financial flows, fee treatment and risk coverage to keep Islamic transactions fully ring-fenced
+                (Islamic banks &amp; accounts only).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">5. Capacity Building</div>
+          <ul class="list">
+            <li>Training for NCGCL staff on Shariah principles for guarantees and risk-sharing mechanisms.</li>
+            <li>Awareness sessions for Board, management and stakeholders on benefits of Shariah-compliant guarantees.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">Key Next Steps</div>
+          <ul class="list">
+            <li>Formal Board / Committee endorsement of Al Hilal as Shariah Advisor.</li>
+            <li>Execution of advisory agreement and kick-off of structure development and operational review.</li>
+            <li>Roll-out of initial training and certification for flagship Islamic guarantee products.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Decision Sought:</strong> Endorse appointment of Al Hilal Shariah Advisors to support NCGCL’s Takaful-based
+        guarantee framework (structure development, regular review, certification, operational segregation and capacity building),
+        with fees and terms as per proposal.
+      </div>
+    </section>
+
+    <!-- 9. RISK & CAPITAL VIEW -->
     <section id="risk" class="section">
       <div class="section-header">
         <div class="section-title">Aggregate Risk, Concentration &amp; Capital Consumption</div>
@@ -782,7 +1201,7 @@
       </div>
     </section>
 
-    <!-- 7. RESOLUTIONS SUMMARY -->
+    <!-- 10. RESOLUTIONS SUMMARY -->
     <section id="resolutions" class="section">
       <div class="section-header">
         <div class="section-title">Summary of Resolutions Sought</div>
